@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { getStarship } from '../services/sw-api';
 
+import './ShipDetails.css'
+
 const ShipDetails = () => {
   const [starship, setStarship] = useState({})
   const {shipId} = useParams()
@@ -24,9 +26,12 @@ const ShipDetails = () => {
       <div className='ship-details'>
         <div>{starship.name}</div>
         <div>{starship.model}</div>
-        <Link to={`/starships`}>Return</Link>
-          <p>(to the list of ships, not of the jedi)</p>
-
+        <Link 
+          to={`/starships`}
+          ><button 
+            className='rtn-link'
+          >Return</button>
+        </Link>
       </div>
     </main>
   );
