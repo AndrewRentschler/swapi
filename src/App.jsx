@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import StarshipsList from '../pages/starships/StarshipsList'
+import ShipDetails from '../ShipDetails/ShipDetails'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <Routes>
         <Route path="/starships" element={<StarshipsList />} />
+        <Route path='/starships/:shipId' element={<ShipDetails />} />
       </Routes>
     </>
   )
