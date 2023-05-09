@@ -25,7 +25,7 @@ const ShipDetails = () => {
         <div>{starship.name}</div>
         <div>{starship.model}</div>
         <Link to={`/starships`}>Return</Link>
-          <p>(to the list of ships, not the jedi)</p>
+          <p>(to the list of ships, not of the jedi)</p>
 
       </div>
     </main>

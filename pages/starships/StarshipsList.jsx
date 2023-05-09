@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 import { getAllStarships } from "../../services/sw-api";
 
+import "./StarshipsList.css"
+
 const StarshipList = () => {
   const [StarshipList, setStarshipList] = useState([])
 
@@ -25,17 +27,14 @@ const StarshipList = () => {
   return (
     <main className="main-list">
       <h1>Starships List</h1>
-      <ul>
+      <div className="ship-list">
         {StarshipList.map(ship => (
-          <>
           <Link 
             key={ship.url}
             to={`/starships/${sliceId(ship.url)}`}
-          ><li>{ship.name}</li></Link>
-
-          </>
+          ><button className="ship-btn">{ship.name}</button></Link>
         ))}
-      </ul>
+      </div>
     </main>
   )
 }

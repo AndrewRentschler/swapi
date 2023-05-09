@@ -1,0 +1,18 @@
+main {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.ship-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5%;
+  gap: 30px;
+}
+
+.ship-btn {
+  width: 300px;
+  height: 200px;
+  font-size: 30px;
+}
