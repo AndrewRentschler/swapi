@@ -27,10 +27,13 @@ const StarshipList = () => {
       <h1>Starships List</h1>
       <ul>
         {StarshipList.map(ship => (
+          <>
           <Link 
             key={ship.url}
             to={`/starships/${sliceId(ship.url)}`}
           ><li>{ship.name}</li></Link>
+
+          </>
         ))}
       </ul>
     </main>
